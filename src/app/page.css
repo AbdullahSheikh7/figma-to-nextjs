@@ -1,0 +1,241 @@
+:root {
+  --primary-color: #F98585;
+  --secondary-color: #21243d;
+}
+
+button {
+  height: 50px;
+  width: 200px;
+  border-radius: 2px;
+  box-shadow: 0 4px 4px 0 rgba(65, 65, 65, 0.54);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+}
+
+header nav ul {
+  justify-content: flex-end;
+  display: flex;
+  gap: 15px;
+  padding: 25px;
+}
+
+header nav ul li {
+  margin: 15px;
+}
+
+header nav ul li a {
+  font: 500 20px var(--font-inter);
+}
+
+main {
+  max-width: 1440px;
+  place-self: center;
+}
+
+main section#home {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main section#home .information {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 0 50px;
+}
+
+main section#home .information h1 {
+  color: var(--secondary-color);
+  line-height: 61px;
+  font: 900 48px var(--font-heebo);
+}
+
+main section#home .information p {
+  color: var(--secondary-color);
+  font: 400 16px var(--font-heebo);
+  line-height: 23.5px;
+}
+
+main section#home .information .btn {
+  font: 500 18px var(--font-heebo);
+  color: white;
+  background: var(--primary-color);
+}
+
+main section#home img {
+  margin: 50px;
+  border-radius: 50%;
+  box-shadow: -10px 10px 0 0 rgba(170, 159, 159, 0.31);
+}
+
+main #recent-post {
+  padding: 25px 50px;
+  background: #F4E2E2;
+}
+
+main #recent-post .recent-posts-header {
+  margin: 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main #recent-post .recent-posts-header h2 {
+  font: 500 22px var(--font-heebo);
+}
+
+main #recent-post .recent-posts-header p {
+  color: var(--primary-color);
+  font: 500 22px var(--font-heebo);
+}
+
+main #recent-post .recent-posts {
+  margin: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+main #recent-post .recent-posts .post {
+  background: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 5px;
+}
+
+main #recent-post .recent-posts .post h3 {
+  font: 700 26px var(--font-heebo);
+}
+
+main #recent-post .recent-posts .post p {
+  font: 400 18px var(--font-heebo);
+  opacity: 0.7;
+}
+
+main #recent-post .recent-posts .post p:nth-child(3) {
+  font: 400 16px var(--font-heebo);
+  color: var(--secondary-color);
+  opacity: 1;
+}
+
+main #featured-works {
+  padding: 25px 50px;
+}
+
+main #featured-works h2 {
+  margin: 50px;
+  font: 500 22px var(--font-heebo);
+}
+
+main #featured-works .featured-works .work {
+  margin: 50px;
+  gap: 25px;
+  display: flex;
+}
+
+main #featured-works .featured-works .work img {
+  object-fit: cover;
+}
+
+main #featured-works .featured-works .work .work-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+main #featured-works .featured-works .work .work-info > * {
+  margin: 5px 0;
+}
+
+main #featured-works .featured-works .work .work-info h3 {
+  font: 700 30px var(--font-heebo);
+}
+
+main #featured-works .featured-works .work .work-info span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main #featured-works .featured-works .work .work-info span .date {
+  display: inline;
+  font: 400 20px var(--font-heebo);
+  background: var(--primary-color);
+  padding: 0px 10px;
+  color: white;
+  border-radius: 9999px;
+}
+
+main #featured-works .featured-works .work .work-info span .category {
+  font: 700 18px var(--font-heebo);
+}
+
+main #featured-works .featured-works .work .work-info .description {
+  font: 300 18px var(--font-heebo);
+}
+
+footer {
+  display: grid;
+  place-items: center;
+  gap: 25px;
+  padding: 50px;
+  padding-top: 150px;
+  font: 500 22px var(--font-heebo);
+  color: var(--secondary-color);
+}
+
+footer .links {
+  display: flex;
+  gap: 25px;
+}
+
+footer .links a {
+  font-size: 30px;
+}
+
+@media (max-width: 834px) {
+  header nav ul {
+    justify-content: center;
+    gap: 5%;
+  }
+  main section#home {
+    flex-direction: column;
+  }
+  main section#home .information {
+    align-items: center;
+    text-align: center;
+  }
+  main section#recent-post .recent-posts {
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
+  }
+  main #featured-works .featured-works .work {
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 50px 100px;
+  }
+}
+
+@media (max-width: 710px) {
+  main section#recent-post .recent-posts-header {
+    margin: 0;
+  }
+  main #featured-works h2 {
+    margin: 50px 0;
+  }
+  main #featured-works .featured-works .work {
+    margin: 50px 0 100px;
+  }
+}

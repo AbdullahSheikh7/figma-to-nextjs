@@ -1,101 +1,137 @@
+"use client";
+
+import "@/app/page.css"
 import Image from "next/image";
+import { FaFacebook } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main>
+        <section id="home">
+          <div className="information">
+            <h1>
+              Hi, I am John, <br /> Creative Technologist
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique esse quasi ea sit, facere dolorem consectetur eos illum ipsam quia tenetur, qui magni, labore at?
+            </p>
+            <button className="btn">Download Resume</button>
+          </div>
+          <Image
+            width={300}
+            height={300}
+            src="/img/profile.jpg"
+            alt="Profile Image"
+            className="profile-image"
+          ></Image>
+        </section>
+
+        <section id="recent-post">
+          <div className="recent-posts-header">
+            <h2>Recent Post</h2>
+            <p>View all</p>
+          </div>
+          <div className="recent-posts">
+            <div className="post">
+              <h3>Making a design system from scratch</h3>
+              <p className="date-category">12 Feb 2020 | Design, Pattern</p>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+              </p>
+            </div>
+            <div className="post">
+              <h3>Making a design system from scratch</h3>
+              <p className="date-category">12 Feb 2020 | Design, Pattern</p>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="featured-works">
+          <h2>Featured works</h2>
+          <div className="featured-works">
+            <div className="work">
+              <Image
+                width={400}
+                height={300}
+                src="/img/work1.png"
+                alt="Designing Dashboards"
+              ></Image>
+              <div className="work-info">
+                <h3>Designing Dashboards</h3>
+                <span>
+                  <p className="date">2020</p>
+                  <p className="category">Dashboard</p>
+                </span>
+                <p className="description">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </p>
+              </div>
+            </div>
+            <div className="work">
+              <Image
+                width={400}
+                height={300}
+                src="/img/work2.png"
+                alt="Designing Dashboards"
+              ></Image>
+              <div className="work-info">
+                <h3>Designing Dashboards</h3>
+                <span>
+                  <p className="date">2020</p>
+                  <p className="category">Dashboard</p>
+                </span>
+                <p className="description">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </p>
+              </div>
+            </div>
+            <div className="work">
+              <Image
+                width={400}
+                height={300}
+                src="/img/work3.png"
+                alt="Designing Dashboards"
+              ></Image>
+              <div className="work-info">
+                <h3>Designing Dashboards</h3>
+                <span>
+                  <p className="date">2020</p>
+                  <p className="category">Dashboard</p>
+                </span>
+                <p className="description">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer>
+        <div className="links">
+          <a href="http://facebook.com/abdullah.sheikh.97" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+          <a href="https://instagram.com/abdullah.sheikh.26" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+          <a href="https://linkedin.com/in/abdullahsalahuddin" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+        </div>
+        <p>Copyright ©2020 All rights reserved</p>
       </footer>
-    </div>
+    </>
   );
 }
